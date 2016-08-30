@@ -64,13 +64,16 @@ Navigation
                         <a class="page-scroll" href="#intro">Intro</a>
                     </li>  
                      <li>
-                        <a class="page-scroll" href="#howto">How to...</a>
+                        <a class="page-scroll" href="#howto">How to</a>
+                    </li>
+                     <li>
+                        <a class="page-scroll" href="#kps">Bugs</a>
                     </li>
                      <li>
                         <a class="page-scroll" href="#kits">Kits</a>
                     </li>
                      <li>
-                        <a class="page-scroll" href="../index.html">Atsikno Ltd</a>
+                        <a class="page-scroll" href="../index.html">Atsikno</a>
                     </li>
                 </ul>
             </div>
@@ -228,13 +231,11 @@ In a song, one of the patterns acts as the 'tempo master' and all of the pattern
                          <b>Create a song arrangement: </b> The in-app-purchase '<i>song_arranger</i>' enables a screen where you can chain the patterns of the song into a full arrangement and play it back. On that page you can add sections to the song defining which pattern to play and how many times each should repeat. You can also add a count in and an ending pattern.                         
 </p><p>
                          
-                         <b>Create an audio loop for use in other apps or tools:</b> The in-app-purchase '<i>pro_features</i>' enables this feature. Tap 'Export wav file...' from the main menu to save the current pattern as a stereo 16bit 44.1Khz .wav file on the device's memory (often called the 'internal SD card' or 'internal storage'). You can access the files using a file explorer app or by connecting the device to a computer. The exact location of the file will vary from device to device but typically you will find a folder called 'DrumNdrummer' at the top level of the internal storage and within that there is an 'exports' folder containing the exported audio files. 
 </p><p>
 The audio files have the same name as the patterns, e.g. if you export a pattern called 'abc' you should find a file at: <pre>/InternalStorage/DrumNdrummer/exports/abc.wav</pre> 
 You can copy or move the wav files to wherever you need them or delete them if you wish. Note that the DrumNdrummer folder is not automatically deleted if you uninstall the app.                      
 </p><p>      
 
-<b>Use your own sounds to create drumkits: </b> The in-app-purchase '<i>pro_features</i>' enables nine new drumkits, 'userkit1' through 'userkit9'. By default these use the sounds of the 'Studio' kit but you can set them to use your own sounds by placing your .wav audio files in a folder that the app creates on the device's memory (often called the 'internal SD card' or 'internal storage'). You can copy files using a file explorer app or by connecting the device to a computer. The exact location of the folder will vary from device to device but typically you will find a folder called 'DrumNdrummer' at the top level of the internal storage and within that there is a 'sounds' folder which is where you should place your sound files.  
                     
                     </p><p>
 The .wav files must be:
@@ -249,7 +250,7 @@ The .wav files must be:
  
                     
                     </p><p>
-                    Each kit is composed of eight sounds labelled in the app as as:
+                    Each kit is composed of eight sounds labelled in the app as:
                     <ul>
                         <li><b>HH</b> (high-hat)</li><li><b>OH</b> (open-hat, the option sound on the HH row)</li><li><b>SN</b> (snare)</li><li><b>KK</b> (kick)</li><li><b>TT</b> (tom)</li><li><b>RD</b> (ride)</li><li><b>RB</b> (ride-bell, the option sound on the RD row)</li><li><b>CR</b> (crash)</li>
                     </ul>
@@ -283,7 +284,39 @@ If the app is running when you change sounds in the 'sounds' folder you may need
             </div>
         </div>
     </section>   
-    
+
+
+    <!-- Section -->
+    <section id="kps">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h3 class="section-heading">Known Bugs</h3>
+                   
+                    <div class="col-sm-12 text-muted  text-aligned">  
+                 
+                    <p>
+                        Known problems and workarounds.
+                    </p>
+                               
+                         <p>    
+                             <b>WAV EXPORT AND CUSTOM KITS NOT WORKING (MARSHMALLOW). AppVersion 0.38 : </b>There is an issue with permissions that results in a misleading error message <i>'Cannot create file using pattern name. Please rename the pattern to avoid illegal characters'</i> when exporting a wav file. In fact the permission that allows the app to write to the external memory has not been correctly set and the app has <b>failed to create the directories for user sounds and export files</b>. This can be remedied manually by taking the following steps:
+                             <ol>
+                                 <li>On your device, go to <b>Settings -> Apps -> Drum n Drummer -> Permissions</b>. You should see a permission called '<b>Storage</b>' and this needs to be enabled.</li>
+                                <li>If Drum n Drummer is running you'll need to kill it manually. Go to recent apps (on Samsung long press the middle button, on other devices press the 'square' button) and swipe away the Drum n Drummer thumbnail if it is there.</li>
+                                <li>Start Drum n Drummer.</li>
+                            </ol>
+                         </p>
+                        
+                        <p>    
+
+               
+                     </div>
+                </div>
+               
+            </div>
+             </div>
+    </section> 
     
 <!-- Section -->
     <section id="kits">
