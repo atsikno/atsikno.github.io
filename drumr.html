@@ -238,7 +238,8 @@ You can copy or move the wav files to wherever you need them or delete them if y
 </p><p>      
 
                     <b>Use your own sounds to create drumkits:  <a href="#kps">[USING V0.38 ON MARSHMALLOW? SEE BUGS]</a> </b> The in-app-purchase '<i>pro_features</i>' enables nine new drumkits, 'userkit1' through 'userkit9'. By default these use the sounds of the 'Studio' kit but you can set them to use your own sounds by placing your .wav audio files in a folder that the app creates on the device's memory (often called the 'internal SD card' or 'internal storage'). You can copy files using a file explorer app or by connecting the device to a computer. The exact location of the folder will vary from device to device but typically you will find a folder called 'DrumNdrummer' at the top level of the internal storage and within that there is a 'sounds' folder which is where you should place your sound files.  
-                    
+                    </p><p>
+                    <b>NOTE</b>: if no 'DrumNdrummer' folder has been automatically created after running the app, this is likely related to bug #001 below. As of Drum n Drummer v0.39 you can force the directory to be created by selecting 'Export wav file...' from the main menu.
                     </p><p>
 The .wav files must be:
                     <ul>
@@ -302,7 +303,7 @@ If the app is running when you change sounds in the 'sounds' folder you may need
                     </p>
                                
                          <p>    
-                             <b>WAV EXPORT AND CUSTOM KITS NOT WORKING (MARSHMALLOW). AppVersion 0.38 : </b>There is an issue with permissions that results in a misleading error message <i>'Cannot create file using pattern name. Please rename the pattern to avoid illegal characters'</i> when exporting a wav file. In fact the permission that allows the app to write to the external memory has not been correctly set and the app has <b>failed to create the directories for user sounds and export files</b>. This can be remedied manually by taking the following steps:
+                             <b>#001: WAV EXPORT AND CUSTOM KITS NOT WORKING (MARSHMALLOW). found in v0.38 | fixed in v0.39: </b>There is an issue with permissions that results in a misleading error message <i>'Cannot create file using pattern name. Please rename the pattern to avoid illegal characters'</i> when exporting a wav file. In fact the permission that allows the app to write to the external memory has not been correctly set and the app has <b>failed to create the directories for user sounds and export files</b>. This can be remedied manually by taking the following steps:
                              <ol>
                                  <li>On your device, go to <b>Settings -> Apps -> Drum n Drummer -> Permissions</b>. You should see a permission called '<b>Storage</b>' and this needs to be enabled.</li>
                                 <li>If Drum n Drummer is running you'll need to kill it manually. Go to recent apps (on Samsung long press the middle button, on other devices press the 'square' button) and swipe away the Drum n Drummer thumbnail if it is there.</li>
