@@ -186,6 +186,13 @@ fieldset[disabled] .btn-primary.active {
 .headerimagenotebook {
   background-image: url('../img/notebook.jpg');
 }
+.headerlander {
+  height: 90px;
+  background-image: url('../img/lander.png');
+}
+.headerfurr {
+  background-image: url('../img/furr.png');
+}
 header {
   background-image: url('../img/header-bg.jpg');
   background-repeat: none;
@@ -202,6 +209,13 @@ header .intro-text {
   padding-top: 100px;
   padding-bottom: 50px;
 }
+header .landerintro-text {
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+
+
 header .intro-text .intro-lead-in {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 22px;
